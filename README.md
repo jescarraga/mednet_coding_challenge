@@ -57,7 +57,7 @@ Hi everyone, I am Jordan Escarraga and I am a backend developer, focused on data
     
         http://localhost:8501/convert
 
-5. Prove the API and the user interface with the following command
+5. Prove the API and the user interface
 
 6. To deactivate the containers, run the following command
 
