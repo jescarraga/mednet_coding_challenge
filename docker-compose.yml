@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  backend:
+    image: mednet-code-challenge-api
+    build:
+      context: .
+      dockerfile: src/backend/Dockerfile
+    container_name: mednet-code-challenge-api
+    restart: always
+    ports:
+      - "0.0.0.0:8000:80"
+
+  frontend:
+    image: mednet-code-challenge-ui
+    build:
+      context: .
+      dockerfile: src/frontend/Dockerfile
+    container_name: mednet-code-challenge-ui
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "0.0.0.0:8501:8501"
